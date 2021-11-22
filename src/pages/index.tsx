@@ -1,6 +1,8 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
 
+import navigation from "../data/nav.json";
+
 type Props = {
   data: {
     allMdx: {
@@ -24,11 +26,19 @@ const HomePage: React.FC<Props> = ({
     <div>
       <h1>Home</h1>
 
-      {nodes.map((item, index) => (
-        <li key={index}>
-          <Link to={`/blog/${item.slug}`}>{item.frontmatter.title}</Link>
-        </li>
-      ))}
+      <nav>
+        {navigation.map((item) => {
+          return <Link to={item.path}>{item.title}</Link>;
+        })}
+      </nav>
+
+      <ul>
+        {nodes.map((item, index) => (
+          <li key={index}>
+            <Link to={`/blog/${item.slug}`}>{item.frontmatter.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
