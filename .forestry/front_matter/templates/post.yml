@@ -23,5 +23,6 @@ fields:
   label: Body
 pages:
 - src/posts/hello-from-forestry.mdx
+- src/posts/kambo.mdx
 - src/posts/second-post.mdx
 - src/posts/this-is-a-miracle.mdx
