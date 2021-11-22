@@ -9,7 +9,7 @@ sections:
   label: Posts
   create: all
   match: "**/*"
-  new_doc_ext: ".mdx"
+  new_doc_ext: mdx
 - type: heading
   label: Blog
 upload_dir: uploads
